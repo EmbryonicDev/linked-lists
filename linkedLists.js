@@ -4,3 +4,12 @@ const Node = (value = null, nextNode = null) => {
     nextNode
   }
 }
+
+const LinkedList = () => {
+  head = 0;
+  size = 0;
+
+  append = () => {
+
+  }
+}
