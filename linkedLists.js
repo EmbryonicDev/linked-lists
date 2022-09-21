@@ -33,6 +33,7 @@ const LinkedList = () => {
     append,
     prepend,
     get size() { return size },
+    get head() { return head.value }
   }
 }
 
@@ -49,4 +50,4 @@ list.prepend(4);
 list.prepend(8);
 list.prepend(30);
 console.log(list.size);
-
+console.log(list.head);
