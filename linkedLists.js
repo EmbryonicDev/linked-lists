@@ -31,7 +31,8 @@ const LinkedList = () => {
 
   return {
     append,
-    prepend
+    prepend,
+    get size() { return size },
   }
 }
 
@@ -47,5 +48,5 @@ list.prepend(21);
 list.prepend(4);
 list.prepend(8);
 list.prepend(30);
-
+console.log(list.size);
 
