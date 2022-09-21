@@ -23,8 +23,15 @@ const LinkedList = () => {
     size++
   }
 
+  prepend = (value) => {
+    const newNode = Node(value, head);
+    head = newNode;
+    size++
+  }
+
   return {
-    append
+    append,
+    prepend
   }
 }
 
@@ -34,4 +41,11 @@ list.append(5);
 list.append(6);
 list.append(9);
 list.append(12);
-list.append(18);
+list.append(17);
+
+list.prepend(21);
+list.prepend(4);
+list.prepend(8);
+list.prepend(30);
+
+
