@@ -91,8 +91,12 @@ list.prepend(3);
 list.prepend(2);
 list.prepend(1);
 list.prepend(0);
+
 console.log("Size: " + list.size);
 console.log("Head: " + list.head);
 console.log('Tail: ' + list.tail());
-console.log('At: ' + at(8));
+console.log('Value At index 3: ' + at(3));
+console.log('Execute "list.pop()" -> ')
 list.pop();
+console.log('New Tail: ' + list.tail());
+console.log('New Size After Pop: ' + list.size);
