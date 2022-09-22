@@ -34,7 +34,7 @@ const LinkedList = () => {
     while (pointer.nextNode !== null) {
       pointer = pointer.nextNode;
     }
-    return pointer;
+    return pointer.value;
   }
 
   at = (index) => {
