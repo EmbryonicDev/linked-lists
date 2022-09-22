@@ -14,11 +14,11 @@ const LinkedList = () => {
 
     if (head == null) head = newNode;
     else {
-      let position = head;
-      while (position.nextNode !== null) {
-        position = position.nextNode;
+      let pointer = head;
+      while (pointer.nextNode !== null) {
+        pointer = pointer.nextNode;
       }
-      position.nextNode = newNode;
+      pointer.nextNode = newNode;
     }
     size++
   }
@@ -30,22 +30,22 @@ const LinkedList = () => {
   }
 
   tail = () => {
-    let position = head;
-    while (position.nextNode !== null) {
-      position = position.nextNode;
+    let pointer = head;
+    while (pointer.nextNode !== null) {
+      pointer = pointer.nextNode;
     }
-    return position;
+    return pointer;
   }
 
   at = (index) => {
-    let position = head;
+    let pointer = head;
     let indexCounter = 0;
 
     while (indexCounter < index) {
-      position = position.nextNode;
+      pointer = pointer.nextNode;
       indexCounter++;
     }
-    return position.value;
+    return pointer.value;
   }
 
   return {
@@ -73,4 +73,4 @@ list.prepend(30);
 console.log(list.size);
 console.log(list.head);
 console.log(list.tail());
-console.log(at(6));
+console.log(at(7));
