@@ -37,12 +37,24 @@ const LinkedList = () => {
     return position;
   }
 
+  at = (index) => {
+    let position = head;
+    let indexCounter = 0;
+
+    while (indexCounter < index) {
+      position = position.nextNode;
+      indexCounter++;
+    }
+    return position.value;
+  }
+
   return {
     append,
     prepend,
     get size() { return size },
     get head() { return head.value },
-    tail
+    tail,
+    at
   }
 }
 
@@ -61,3 +73,4 @@ list.prepend(30);
 console.log(list.size);
 console.log(list.head);
 console.log(list.tail());
+console.log(at(6));
