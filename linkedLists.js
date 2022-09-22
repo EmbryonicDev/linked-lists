@@ -48,13 +48,34 @@ const LinkedList = () => {
     return pointer.value;
   }
 
+  pop = () => {
+    let pointer = head;
+    let tailIndex = 0;
+
+    while (pointer.nextNode !== null) {
+      pointer = pointer.nextNode;
+      tailIndex++;
+    }
+
+    let indexCounter = 0;
+    pointer = head;
+
+    while (indexCounter < tailIndex - 1) {
+      pointer = pointer.nextNode;
+      indexCounter++;
+    }
+    size--;
+    return pointer.nextNode = null;
+  }
+
   return {
     append,
     prepend,
     get size() { return size },
     get head() { return head.value },
     tail,
-    at
+    at,
+    pop
   }
 }
 
@@ -74,3 +95,4 @@ console.log("Size: " + list.size);
 console.log("Head: " + list.head);
 console.log('Tail: ' + list.tail());
 console.log('At: ' + at(8));
+list.pop();
