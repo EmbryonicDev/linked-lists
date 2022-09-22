@@ -60,17 +60,17 @@ const LinkedList = () => {
 
 // Test Script
 const list = LinkedList();
+list.append(4);
 list.append(5);
 list.append(6);
-list.append(9);
-list.append(12);
-list.append(17);
+list.append(7);
+list.append(8);
 
-list.prepend(21);
-list.prepend(4);
-list.prepend(8);
-list.prepend(30);
+list.prepend(3);
+list.prepend(2);
+list.prepend(1);
+list.prepend(0);
 console.log("Size: " + list.size);
 console.log("Head: " + list.head);
 console.log('Tail: ' + list.tail());
-console.log('At: ' + at(7));
+console.log('At: ' + at(8));
