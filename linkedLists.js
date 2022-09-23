@@ -104,11 +104,15 @@ const LinkedList = () => {
     let myString = '';
     let pointer = head;
 
-    while (pointer.nextNode !== null) {
-      myString += `( ${pointer.value} ) -> `
-      pointer = pointer.nextNode;
+    if (size > 0) {
+      while (pointer.nextNode !== null) {
+        myString += `( ${pointer.value} ) -> `
+        pointer = pointer.nextNode;
+      }
+      return myString += `( ${pointer.value} ) -> null`
+    } else {
+      return 'List is Empty'
     }
-    return myString += `( ${pointer.value} ) -> null`
   }
 
   insertAt = (value, index) => {
