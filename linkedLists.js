@@ -164,19 +164,20 @@ list.prepend(2);
 list.prepend(1);
 list.prepend(0);
 
+console.log('List values in string: ' + list.toString());
 console.log("Size: " + list.size);
 console.log("Head: " + list.head);
 console.log('Tail: ' + list.tail());
 console.log('Value At index 3: ' + at(3));
 console.log('Execute "list.pop()" -> ')
 list.pop();
+console.log(list.toString());
 console.log('New Tail: ' + list.tail());
 console.log('New Size After Pop: ' + list.size);
 console.log('List contains 5 -> ' + list.contains(5));
 console.log('List contains 100 -> ' + list.contains(100));
 console.log('Find index of value: 6 -> ' + list.find(6));
 console.log('Find index of value: 666 -> ' + list.find(666));
-console.log('List values in string: ' + list.toString());
 console.log('Execute "list.insertAt("inserted value", 5)" -> ')
 list.insertAt('inserted value', 5)
 console.log(list.toString());
