@@ -57,7 +57,7 @@ const LinkedList = () => {
       return head.nextNode = null;
     } else if (size == 1) {
       size--;
-      return head = ''
+      return head = null;
     } else if (size < 1) {
       console.log('List is empty, nothing to pop!');
       return;
