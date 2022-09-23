@@ -58,6 +58,9 @@ const LinkedList = () => {
     } else if (size == 1) {
       size--;
       return head = ''
+    } else if (size < 1) {
+      console.log('List is empty, nothing to pop!');
+      return;
     }
 
     while (pointer.nextNode !== null) {
@@ -165,6 +168,17 @@ const LinkedList = () => {
 
 // Test Script
 const list = LinkedList();
+list.append(4);
+list.append(5);
+
+console.log(toString());
+list.pop();
+console.log(toString());
+list.pop();
+console.log('Size: ' + size);
+list.pop();
+console.log(toString());
+
 list.append(4);
 list.append(5);
 list.append(6);
