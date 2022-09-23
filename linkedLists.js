@@ -103,6 +103,22 @@ const LinkedList = () => {
     return myString += `( ${pointer.value} ) -> null`
   }
 
+  insertAt = (value, index) => {
+    let pointer = head;
+    let indexCounter = 0;
+
+    if (index == 0)
+      head = Node(value, pointer);
+
+    while (indexCounter < index - 1) {
+      pointer = pointer.nextNode;
+      indexCounter++;
+    }
+    let tempNodes = pointer.nextNode;
+    pointer.nextNode = Node(value, tempNodes);
+    size++
+  }
+
   return {
     append,
     prepend,
@@ -113,7 +129,8 @@ const LinkedList = () => {
     pop,
     contains,
     find,
-    toString
+    toString,
+    insertAt
   }
 }
 
@@ -143,3 +160,7 @@ console.log('List contains 100 -> ' + list.contains(100));
 console.log('Find index of value: 6 -> ' + list.find(6));
 console.log('Find index of value: 666 -> ' + list.find(666));
 console.log('List values in string: ' + list.toString());
+console.log('Execute "list.insertAt("inserted value", 5)" -> ')
+list.insertAt('inserted value', 5)
+console.log(list.toString());
+console.log('New Size After insert: ' + list.size);
