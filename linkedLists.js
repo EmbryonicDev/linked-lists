@@ -119,6 +119,22 @@ const LinkedList = () => {
     size++
   }
 
+  removeAt = (index) => {
+    let pointer = head;
+    indexCounter = 0;
+
+    if (index == 0)
+      head = head.nextNode;
+
+    while (indexCounter < index - 1) {
+      pointer = pointer.nextNode;
+      indexCounter++;
+    }
+    let tempNodes = pointer.nextNode.nextNode;
+    pointer.nextNode = tempNodes;
+    size--;
+  }
+
   return {
     append,
     prepend,
@@ -130,7 +146,8 @@ const LinkedList = () => {
     contains,
     find,
     toString,
-    insertAt
+    insertAt,
+    removeAt
   }
 }
 
@@ -164,3 +181,7 @@ console.log('Execute "list.insertAt("inserted value", 5)" -> ')
 list.insertAt('inserted value', 5)
 console.log(list.toString());
 console.log('New Size After insert: ' + list.size);
+console.log('Execute "list.removeAt(5)" -> ')
+list.removeAt(5)
+console.log(list.toString());
+console.log('New Size After removal: ' + list.size);
