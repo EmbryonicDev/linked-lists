@@ -79,6 +79,19 @@ const LinkedList = () => {
     return true;
   }
 
+  find = (value) => {
+    let indexCounter = 0;
+    let pointer = head;
+
+    while (pointer.value !== value) {
+      pointer = pointer.nextNode;
+      if (pointer.nextNode == null && pointer.value !== value)
+        return null;
+      indexCounter++;
+    }
+    return indexCounter;
+  }
+
   return {
     append,
     prepend,
@@ -88,6 +101,7 @@ const LinkedList = () => {
     at,
     pop,
     contains,
+    find,
   }
 }
 
@@ -114,4 +128,5 @@ console.log('New Tail: ' + list.tail());
 console.log('New Size After Pop: ' + list.size);
 console.log('List contains 5 -> ' + list.contains(5));
 console.log('List contains 100 -> ' + list.contains(100));
-
+console.log('Find index of value: 6 -> ' + list.find(6));
+console.log('Find index of value: 666 -> ' + list.find(666));
