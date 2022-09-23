@@ -92,6 +92,17 @@ const LinkedList = () => {
     return indexCounter;
   }
 
+  toString = () => {
+    let myString = '';
+    let pointer = head;
+
+    while (pointer.nextNode !== null) {
+      myString += `( ${pointer.value} ) -> `
+      pointer = pointer.nextNode;
+    }
+    return myString += `( ${pointer.value} ) -> null`
+  }
+
   return {
     append,
     prepend,
@@ -102,6 +113,7 @@ const LinkedList = () => {
     pop,
     contains,
     find,
+    toString
   }
 }
 
@@ -130,3 +142,4 @@ console.log('List contains 5 -> ' + list.contains(5));
 console.log('List contains 100 -> ' + list.contains(100));
 console.log('Find index of value: 6 -> ' + list.find(6));
 console.log('Find index of value: 666 -> ' + list.find(666));
+console.log('List values in string: ' + list.toString());
