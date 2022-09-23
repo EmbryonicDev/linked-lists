@@ -114,7 +114,7 @@ const LinkedList = () => {
       }
       return myString += `( ${pointer.value} ) -> null`
     } else {
-      return 'List is Empty'
+      return 'List is empty, nothing to print!'
     }
   }
 
