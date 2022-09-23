@@ -52,6 +52,14 @@ const LinkedList = () => {
     let pointer = head;
     let tailIndex = 0;
 
+    if (size == 2) {
+      size--;
+      return head.nextNode = null;
+    } else if (size == 1) {
+      size--;
+      return head = ''
+    }
+
     while (pointer.nextNode !== null) {
       pointer = pointer.nextNode;
       tailIndex++;
